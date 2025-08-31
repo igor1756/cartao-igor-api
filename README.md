@@ -95,10 +95,7 @@ Para desenvolvimento, o projeto já vem configurado para utilizar o H2, sem a ne
 `Atenção! Os dados inseridos em ambiente de desenvolvimento são descartados assim que a aplicação é encerrada e servem apenas para desenvolvimento e testes. Para persistência perene, deve-se configurar o ambiente de produção, cuja configuração é sugerida em sessão própria nesta documentação.`
 
 
-Para produção, edite o arquivo `src/main/resources/application.properties`, alterando o `spring.profiles.active=dev` para `spring.profiles.active=prod` e adicione as configurações do banco de dados desejado no arquivo `src/main/resources/application-prod.properties`.
-
-
-`Atenção! Os dados de produção são exemplos, não funcionarão corretamente se não ajustados.`
+Para produção, edite o arquivo `src/main/resources/application.properties`, alterando o `spring.profiles.active=dev` para `spring.profiles.active=prod` e adicione as configurações do banco de dados desejado em um arquivo `src/main/resources/application-prod.properties`, que deverá ser criado. Orientações específicas para esta etapa estão detalhadas em capítulo ao final deste documento.
 
 
 3. **Execute a aplicação**
@@ -114,6 +111,7 @@ mvn spring-boot:run
 
 Confira o nome da base de dados e clique em "Connect".
 Obs: Não é necessário preencher senha e o usuário é "sa".
+
 
 5. **Acesse a documentação da API**
 
