@@ -15,7 +15,7 @@ import jakarta.validation.constraints.Past;
 import jakarta.validation.constraints.Pattern;
 
 @Entity
-@Table(name = "clientes")
+@Table(name = "clientes", schema = "public")
 public class Cliente {
 
     @Id

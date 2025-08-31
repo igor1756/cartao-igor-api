@@ -1,5 +1,7 @@
 package com.igor.cartaoIgor.dto;
 
+import java.math.BigDecimal;
+
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -20,7 +22,7 @@ public class CartaoCadastroDTO {
     private String tipo;
 
     @NotNull(message = "A anuidade do cartão é obrigatória")
-    private float anuidade;
+    private BigDecimal anuidade;
 
     @NotBlank(message = "A bandeira do cartão é obrigatória")
     @Size(max = 50, message = "A bandeira do cartão deve ter no máximo 50 caracteres")
@@ -47,11 +49,11 @@ public class CartaoCadastroDTO {
         this.tipo = tipo;
     }
 
-    public float getAnuidade() {
+    public BigDecimal getAnuidade() {
         return anuidade;
     }
 
-    public void setAnuidade(float anuidade) {
+    public void setAnuidade(BigDecimal anuidade) {
         this.anuidade = anuidade;
     }
 

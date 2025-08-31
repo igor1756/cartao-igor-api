@@ -1,5 +1,7 @@
 package com.igor.cartaoIgor.model;
 
+import java.math.BigDecimal;
+
 import com.igor.cartaoIgor.enums.CartaoTipo;
 
 import jakarta.persistence.Column;
@@ -9,9 +11,11 @@ import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotBlank;
 
 @Entity
+@Table(name = "cartoes", schema = "public")
 public class Cartao {
 
     @Id
@@ -26,7 +30,7 @@ public class Cartao {
     private CartaoTipo tipo;
 
     @Column(nullable = false)
-    private float anuidade;
+    private BigDecimal anuidade;
 
     @Column(nullable = false)
     @NotBlank(message = "A bandeira do cartão é obrigatória")
@@ -35,7 +39,7 @@ public class Cartao {
     public Cartao() {
     }
 
-    public Cartao(String nome, CartaoTipo tipo, float anuidade, String bandeira) {
+    public Cartao(String nome, CartaoTipo tipo, BigDecimal anuidade, String bandeira) {
         this.nome = nome;
         this.tipo = tipo;
         this.anuidade = anuidade;
@@ -66,11 +70,11 @@ public class Cartao {
         this.tipo = tipo;
     }
 
-    public float getAnuidade() {
+    public BigDecimal getAnuidade() {
         return anuidade;
     }
 
-    public void setAnuidade(float anuidade) {
+    public void setAnuidade(BigDecimal anuidade) {
         this.anuidade = anuidade;
     }
 

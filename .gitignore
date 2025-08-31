@@ -71,7 +71,7 @@ Ignorar arquivos de cache
 Ignorar dados sensíveis
 # /src/main/resources/application.properties
 # /src/main/resources/application-dev.properties
-# /src/main/resources/application-prod.properties
+/src/main/resources/application-prod.properties
 # /src/main/resources/application.yml
 !/src/main/resources/application-example.properties
 !/src/main/resources/application-example.yml
